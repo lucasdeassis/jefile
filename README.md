@@ -1,4 +1,7 @@
-
+# JEFILE
+	
+Jefile is a file upload package for Java
+	
 ## Development
 
 To start your application in the dev profile, simply run:
@@ -11,6 +14,4 @@ To start your application in the dev profile, simply run:
 To launch your application's tests, run:
 
     ./gradlew test
-
-For more information, refer to the [Running tests page][].
 
