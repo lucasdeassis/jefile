@@ -7,9 +7,8 @@
                         http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
     <property name="now" value="now()" dbms="h2"/>
-    <property name="now" value="current_timestamp" dbms="postgresql"/>
 
-    <changeSet id="00000000000000" author="jhipster">
+    <changeSet id="00000000000000" author="lucas">
         <createSequence sequenceName="hibernate_sequence" startValue="1000" incrementBy="50"/>
     </changeSet>
 
@@ -21,8 +20,8 @@
             <column name="file_name" type="varchar(50)">
                 <constraints nullable="false" />
             </column>
-            <column name="file_created_at" type="timestamp"/>
             <column name="file_description" type="varchar(255)"/>
+            <column name="file_created_at" type="varchar(30)"/>
             <column name="file_content_url" type="varchar(255)"/>
         </createTable>
     </changeSet>
