@@ -2,12 +2,15 @@
 	
 Jefile is a file upload package for Java
 	
-## Development
+## Development and Run
 
-To start your application in the dev profile, simply run:
+To build Jefile, simply run:
 
-    ./gradlew
+    ./gradlew build
 
+To start the SpringBoot API, build and execute the `.jar` file with:
+
+	java -jar build/libs/jefile-0.0.1-SNAPSHOT.jar
 
 ## Testing
 
