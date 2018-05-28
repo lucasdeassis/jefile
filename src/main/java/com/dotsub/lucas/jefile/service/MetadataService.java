@@ -12,7 +12,7 @@ import com.dotsub.lucas.jefile.domain.Metadata;
 @Service
 public class MetadataService {
 	private static final Logger logger = LoggerFactory.getLogger(MetadataService.class);
-	private static final String template = "%s/%s/content";
+	private static final String template = "%s/data/%s";
 	private static final String logCreationTemplate = "Creating file: name:%s, url:%s";
 
 	private final AtomicLong counter = new AtomicLong();

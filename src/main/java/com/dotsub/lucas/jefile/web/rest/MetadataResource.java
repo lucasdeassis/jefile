@@ -29,7 +29,10 @@ public class MetadataResource {
   @ResponseStatus(HttpStatus.ACCEPTED)
   @ResponseBody
   public Metadata greeting(HttpServletRequest request, @RequestBody MetadataDto metadataDto) {
+    String baseUrlTemplate = "%s://%s:%s";
+
     return metadataService.createMetadata(
-      modelMapper.map(metadataDto, Metadata.class), request.getRequestURI());
+      modelMapper.map(metadataDto, Metadata.class), String.format(
+        baseUrlTemplate, request.getScheme(), request.getServerName(), request.getServerPort()));
   }
 }
