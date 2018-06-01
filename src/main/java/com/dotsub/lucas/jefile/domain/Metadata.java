@@ -10,6 +10,7 @@ public class Metadata {
 	private String contentUrl;
 	
 	public Metadata() {
+	  // default constructor for Jackson
 	}
 	
 	public Metadata(String name, String description, String contentUrl) {
