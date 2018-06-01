@@ -1,6 +1,8 @@
 package com.dotsub.lucas.jefile.web.rest;
 
+
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +30,7 @@ public class MetadataResource {
   @RequestMapping(method = RequestMethod.POST)
   @ResponseStatus(HttpStatus.ACCEPTED)
   @ResponseBody
-  public Metadata greeting(HttpServletRequest request, @RequestBody MetadataDto metadataDto) {
+  public Metadata greeting(HttpServletRequest request, @Valid @RequestBody MetadataDto metadataDto) {
     String baseUrlTemplate = "%s://%s:%s";
 
     return metadataService.createMetadata(
