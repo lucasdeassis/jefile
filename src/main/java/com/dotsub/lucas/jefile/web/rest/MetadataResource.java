@@ -1,6 +1,5 @@
 package com.dotsub.lucas.jefile.web.rest;
 
-
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
@@ -30,11 +29,9 @@ public class MetadataResource {
   @RequestMapping(method = RequestMethod.POST)
   @ResponseStatus(HttpStatus.ACCEPTED)
   @ResponseBody
-  public Metadata greeting(HttpServletRequest request, @Valid @RequestBody MetadataDto metadataDto) {
-    String baseUrlTemplate = "%s://%s:%s";
-
+  public Metadata greeting(HttpServletRequest request,
+      @Valid @RequestBody MetadataDto metadataDto) {
     return metadataService.createMetadata(
-      modelMapper.map(metadataDto, Metadata.class), String.format(
-        baseUrlTemplate, request.getScheme(), request.getServerName(), request.getServerPort()));
+      modelMapper.map(metadataDto, Metadata.class), request);
   }
 }

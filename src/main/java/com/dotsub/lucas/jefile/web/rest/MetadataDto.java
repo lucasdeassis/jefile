@@ -1,7 +1,5 @@
 package com.dotsub.lucas.jefile.web.rest;
 
-import java.util.Optional;
-
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -15,7 +13,7 @@ public class MetadataDto {
 	private String name;
   
   @Size(min=0, max=255)
-	private Optional<String> description;
+	private String description;
 	
 	public MetadataDto() {
     // default constructor for Jackson
@@ -23,7 +21,7 @@ public class MetadataDto {
 	
 	public MetadataDto(String name, String description) {
 		this.name = name;
-		this.description = Optional.of(description);
+		this.description = description;
 	}
 
 	public String getName() {
@@ -35,10 +33,10 @@ public class MetadataDto {
 	}
 	
 	public String getDescription() {
-		return description.orElse("");
+		return description;
 	}
 	
-	public void setDescription(Optional<String> description) {
+	public void setDescription(String description) {
 		this.description = description;
 	}
 }

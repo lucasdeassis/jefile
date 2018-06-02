@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloResource {
 
-    @RequestMapping("/")
-    public String index() {
-        return "Jefile API";
-    }
+  @RequestMapping("/")
+  public String index() {
+    return "Jefile API";
+  }
 
 }
