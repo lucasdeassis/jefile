@@ -10,9 +10,8 @@ import org.springframework.test.web.servlet.MockMvc;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @AutoConfigureMockMvc
-public class ResourceTest {
+public abstract class ResourceTest {
   
   @Autowired
   protected MockMvc mvc;
-
 }
