@@ -29,7 +29,7 @@ public class MetadataResource {
   @RequestMapping(method = RequestMethod.POST)
   @ResponseStatus(HttpStatus.ACCEPTED)
   @ResponseBody
-  public Metadata greeting(HttpServletRequest request,
+  public Metadata createMetadata(HttpServletRequest request,
       @Valid @RequestBody MetadataDto metadataDto) {
     return metadataService.createMetadata(
       modelMapper.map(metadataDto, Metadata.class), request);

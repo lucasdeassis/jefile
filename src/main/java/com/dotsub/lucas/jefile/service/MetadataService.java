@@ -3,6 +3,7 @@ package com.dotsub.lucas.jefile.service;
 import java.time.Instant;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.transaction.Transactional;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,17 +23,22 @@ public class MetadataService {
   @Autowired
   private MetadataRepository metadataRepository;
 
+  @Transactional
   public Metadata createMetadata(Metadata metadata, HttpServletRequest request) {
-    String contentBaseUrl = String.format(
-      baseUrlTemplate, request.getScheme(), request.getServerName(), request.getServerPort());
-    
-    String url = String.format(template, contentBaseUrl, metadata.getName());
-    metadata.setContentUrl(url);
-    metadata.setCreatedAt(Instant.now().toString());
-
     Metadata newMetadata = metadataRepository.save(metadata);
 
-    logger.info(String.format(logCreationTemplate, newMetadata.getName(), newMetadata.getContentUrl()));
+    String contentBaseUrl = String.format(
+      baseUrlTemplate, request.getScheme(), request.getServerName(), request.getServerPort());
+
+    String url = String.format(template, contentBaseUrl, newMetadata.getId());
+
+    newMetadata.setContentUrl(url);
+    newMetadata.setCreatedAt(Instant.now().toString());
+
+    metadataRepository.save(newMetadata);
+
+    logger.info(String.format(logCreationTemplate, newMetadata.getName(), newMetadata
+      .getContentUrl()));
 
     return metadata;
   }
