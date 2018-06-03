@@ -26,7 +26,7 @@ public class JefileApplication {
         "{} is running! Access URLs:\n\t" +
         "Local: \t\t{}://localhost:{}\n\t" +
         "External: \t{}://{}:{}\n\t",
-      env.getProperty("application.name"),
+      env.getProperty("spring.application.name"),
       protocol,
       env.getProperty("server.port"),
       protocol,
