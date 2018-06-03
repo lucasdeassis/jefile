@@ -1,4 +1,4 @@
-package com.dotsub.lucas.jefile.rest.errors;
+package com.dotsub.lucas.jefile.web.rest.errors;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
