@@ -4,6 +4,7 @@ import java.time.Instant;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.transaction.Transactional;
+import javax.validation.ConstraintViolationException;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,6 +26,11 @@ public class MetadataService {
 
   @Transactional
   public Metadata createMetadata(Metadata metadata, HttpServletRequest request) {
+
+    if (metadataRepository.existsByName(metadata.getName()))
+      throw new ConstraintViolationException(String.format(
+        "File metadata with name %s already exists", metadata.getName()), null);
+
     Metadata newMetadata = metadataRepository.save(metadata);
 
     String contentBaseUrl = String.format(
