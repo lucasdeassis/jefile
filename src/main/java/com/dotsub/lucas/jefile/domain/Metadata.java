@@ -17,6 +17,8 @@ public class Metadata {
   private Long id;
   private String name;
   private String description;
+  private Long size;
+
   private String createdAt;
   private String contentUrl;
 
@@ -57,6 +59,14 @@ public class Metadata {
 
   public void setDescription(String description) {
     this.description = description;
+  }
+
+  public Long getSize() {
+    return size;
+  }
+
+  public void setSize(Long size) {
+    this.size = size;
   }
 
   public String getCreatedAt() {

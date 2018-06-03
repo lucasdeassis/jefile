@@ -33,12 +33,15 @@ public class DataService {
   public Data upload(String id, MultipartFile multipartFile) throws IOException {
     File file = FileUtils.convertMultiPartToFile(multipartFile);
 
-    Metadata metadata = metadataRepository.findById(Long.parseLong(id)).orElseThrow(JeFileNotFoundException::new);
+    Metadata metadata = metadataRepository.findById(Long.parseLong(id)).orElseThrow(
+      JeFileNotFoundException::new);
 
     logger.info(String.format(logUploadTemplate,
       metadata.getName(), file.length()));
 
-    return dataRepository.save(new Data(metadata, String.valueOf(file.length())));
+    metadata.setSize(file.length());
+
+    return dataRepository.save(new Data(metadata, file.getName()));
   }
 
 }
