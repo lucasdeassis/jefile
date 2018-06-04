@@ -19,8 +19,9 @@ public class Data {
 
   @OneToOne(fetch = FetchType.LAZY)
   @MapsId
+  @JsonIgnoreProperties({ "id" })
   private Metadata metadata;
-  
+
   private String content;
 
   public Data() {
