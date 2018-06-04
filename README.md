@@ -16,8 +16,11 @@ To start the SpringBoot API, build and execute the `.jar` file with:
 
 Or through gradle/maven using:
 
-  gradle bootRun
-  mvn spring-boot:run
+    gradle bootRun
+  
+and:
+  
+    mvn spring-boot:run
 
 ## Testing
 
