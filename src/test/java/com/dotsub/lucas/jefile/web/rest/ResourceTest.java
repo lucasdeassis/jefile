@@ -1,4 +1,4 @@
-package com.dotsub.lucas.jefile.web.rest.common;
+package com.dotsub.lucas.jefile.web.rest;
 
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

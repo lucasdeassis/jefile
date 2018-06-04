@@ -17,8 +17,6 @@ public class Metadata {
   private Long id;
   private String name;
   private String description;
-  private Long size;
-
   private String createdAt;
   private String contentUrl;
 
@@ -37,14 +35,6 @@ public class Metadata {
     this.contentUrl = contentUrl;
   }
 
-  public Long getId() {
-    return id;
-  }
-
-  public void setId(Long id) {
-    this.id = id;
-  }
-
   public String getName() {
     return name;
   }
@@ -59,14 +49,6 @@ public class Metadata {
 
   public void setDescription(String description) {
     this.description = description;
-  }
-
-  public Long getSize() {
-    return size;
-  }
-
-  public void setSize(Long size) {
-    this.size = size;
   }
 
   public String getCreatedAt() {

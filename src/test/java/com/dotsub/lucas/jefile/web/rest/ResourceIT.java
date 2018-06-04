@@ -1,4 +1,4 @@
-package com.dotsub.lucas.jefile.web.rest.common;
+package com.dotsub.lucas.jefile.web.rest;
 
 import java.net.MalformedURLException;
 import java.net.URL;

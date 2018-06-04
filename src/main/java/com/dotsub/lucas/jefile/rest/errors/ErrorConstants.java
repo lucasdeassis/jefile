@@ -1,4 +1,4 @@
-package com.dotsub.lucas.jefile.web.rest.errors;
+package com.dotsub.lucas.jefile.rest.errors;
 
 import java.net.URI;
 

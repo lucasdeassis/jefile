@@ -23,7 +23,6 @@
         <constraints nullable="false" unique="true" />
       </column>
       <column name="description" type="varchar(255)" />
-      <column name="size" type="bigint" />
       <column name="created_at" type="varchar(30)" />
       <column name="content_url" type="varchar(255)" />
     </createTable>

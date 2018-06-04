@@ -5,4 +5,4 @@
  * @author deassisrosal
  *
  */
-package config;
+package com.dotsub.lucas.jefile.rest.errors;
