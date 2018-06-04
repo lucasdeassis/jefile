@@ -1,4 +1,4 @@
-package com.dotsub.lucas.jefile.web.rest.test;
+package com.dotsub.lucas.jefile.web.rest;
 
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertThat;
@@ -6,7 +6,7 @@ import static org.junit.Assert.assertThat;
 import org.junit.Test;
 import org.springframework.http.ResponseEntity;
 
-import com.dotsub.lucas.jefile.web.rest.ResourceIT;
+import com.dotsub.lucas.jefile.web.rest.common.ResourceIT;
 
 public class HelloResourceIT extends ResourceIT {
 
