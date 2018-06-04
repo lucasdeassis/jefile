@@ -1,4 +1,4 @@
-package com.dotsub.lucas.jefile.rest.errors;
+package com.dotsub.lucas.jefile.web.rest.errors;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -13,10 +13,7 @@ import org.springframework.validation.FieldError;
 import org.springframework.validation.ObjectError;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
-@JsonInclude(Include.NON_NULL)
 class ApiError {
 
   private HttpStatus status;
@@ -160,7 +157,6 @@ class ApiError {
 
   }
 
-  @JsonInclude(Include.NON_NULL)
   class ApiValidationError extends ApiSubError {
     private String object;
     private String field;

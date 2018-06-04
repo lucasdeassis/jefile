@@ -1,4 +1,4 @@
-package com.dotsub.lucas.jefile.web.rest.test;
+package com.dotsub.lucas.jefile.web.rest;
 
 import static org.hamcrest.Matchers.equalTo;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
@@ -8,7 +8,7 @@ import org.junit.Test;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
-import com.dotsub.lucas.jefile.web.rest.ResourceTest;
+import com.dotsub.lucas.jefile.web.rest.common.ResourceTest;
 
 public class HelloResourceTest extends ResourceTest {
 

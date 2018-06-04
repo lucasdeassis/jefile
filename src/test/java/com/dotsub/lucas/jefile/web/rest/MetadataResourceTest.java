@@ -1,4 +1,4 @@
-package com.dotsub.lucas.jefile.web.rest.test;
+package com.dotsub.lucas.jefile.web.rest;
 
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
@@ -12,13 +12,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
-import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 
 import com.dotsub.lucas.jefile.domain.Metadata;
 import com.dotsub.lucas.jefile.service.MetadataService;
 import com.dotsub.lucas.jefile.web.rest.MetadataDto;
-import com.dotsub.lucas.jefile.web.rest.ResourceTest;
+import com.dotsub.lucas.jefile.web.rest.common.ResourceTest;
 import com.dotsub.lucas.jefile.web.rest.utils.ITUtil;
 
 public class MetadataResourceTest extends ResourceTest {
