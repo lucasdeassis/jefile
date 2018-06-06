@@ -1,0 +1,4 @@
+{
+  "EXTENSIONS": "audio/*,video/*,image/*,text/plain,.pdf,.txt,.gif,.docx,.pages,.xlsx,.xls,.csv",
+  "MAX_SIZE": 10000000
+}
