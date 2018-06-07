@@ -1,4 +1,5 @@
- [![Build Status](https://semaphoreci.com/api/v1/projects/a329c770-30af-491e-a5af-6e3c503f6dc4/2005670/shields_badge.svg)](https://semaphoreci.com/lucasdeassis-50/jefile)
+[![Build Status](https://semaphoreci.com/api/v1/projects/a329c770-30af-491e-a5af-6e3c503f6dc4/1992812/badge.svg)](https://semaphoreci.com/lucasdeassis-50/jefile)
+
 
 # JEFILE
 	

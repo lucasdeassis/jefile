@@ -26,5 +26,10 @@
 /nbdist/
 /.nb-gradle/
 
-# Test
+### Test ###
 .testfile
+
+### Web ###
+/examples/react/node_modules
+/examples/react/package-lock.json
+/examples/react/yarn-error.log
